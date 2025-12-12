@@ -719,12 +719,14 @@ body {
     align-items: flex-start;
     gap: 15px;
     margin-bottom: 20px;
+    max-width: 100%;
 }
 
 .contact-item i {
     width: 45px;
     height: 45px;
     min-width: 45px;
+    flex-shrink: 0;
     background: var(--primary-color);
     color: var(--white);
     border-radius: 50%;
@@ -737,8 +739,11 @@ body {
 .contact-item span {
     color: var(--text-dark);
     font-size: 1rem;
-    word-wrap: break-word;
-    line-height: 1.5;
+    line-height: 1.6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    flex: 1;
+    min-width: 0;
 }
 
 .social-links {
@@ -922,13 +927,17 @@ body {
     }
 
     .contact-info {
-        text-align: center;
+        text-align: left;
     }
 
     .contact-item {
         justify-content: flex-start;
         text-align: left;
-        flex-wrap: wrap;
+    }
+
+    .contact-details {
+        width: 100%;
+        padding: 0 10px;
     }
 
     .social-links {
